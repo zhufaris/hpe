@@ -41,7 +41,7 @@ def printstring(sheet_name, values):
 def splitaddress(address):
     match = re.match(r"([a-zA-Z]+)([\d\.]+)", address, flags=0)
     if match:
-        return match.group(1) + '      ' + match.group(2)
+        return match.group(1) + ' '*6 + match.group(2)
     else:
         raise ValueError('Address format wrong!')
 
