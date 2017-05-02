@@ -1,0 +1,18 @@
+DATA_BLOCK "DB_ANALOG_OUT"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	SC_909_2601_101 : "UDT_CM_OutAnlg"; // GEN EAF 9-1 VSD Speed Control
+	SC_909_1601_101 : "UDT_CM_OutAnlg"; // CT 9-1 Fan 1 VSD Speed Control
+	SC_909_1603_101 : "UDT_CM_OutAnlg"; // MUP 9-1 Fan 1 VSD Speed Control
+	SC_909_1604_101 : "UDT_CM_OutAnlg"; // CWP 9-1 VSD Speed Control
+	SC_909_2601_102 : "UDT_CM_OutAnlg"; // GEN EAF 9-2 VSD Speed Control
+	SC_909_1602_101 : "UDT_CM_OutAnlg"; // CT 9-2 Fan 1 VSD Speed Control
+	SC_909_1603_102 : "UDT_CM_OutAnlg"; // MUP 9-2 Fan 1 VSD Speed Control
+	SC_909_1604_102 : "UDT_CM_OutAnlg"; // CWP 9-2 VSD Speed Control
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

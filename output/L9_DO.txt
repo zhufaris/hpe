@@ -1,0 +1,34 @@
+DATA_BLOCK "DB_DIGITAL_OUT"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	HS_909_1601_101_Start : BOOL; // CT 9-1 FAN 1 Start Cmd
+	HS_909_1601_101_Stop : BOOL; // CT 9-1 FAN 1 Stop Cmd
+	HS_909_1601_201_01_Open : BOOL; // CT 9-1 Inlet Valve Open Cmd
+	HS_909_1601_201_01_Close : BOOL; // CT 9-1 Inlet Valve Close Cmd
+	HS_909_1601_201_02_Open : BOOL; // CT 9-1 Outlet Valve Open Cmd
+	HS_909_1601_201_02_Close : BOOL; // CT 9-1 Outlet Valve Close Cmd
+	HS_909_1603_101_Start : BOOL; // MUP 9-1 Start cmd
+	HS_909_1603_101_Stop : BOOL; // MUP 9-1 Stop cmd
+	HS_909_1601_102_Start : BOOL; // CT 9-2 FAN 1 Start Cmd
+	HS_909_1601_102_Stop : BOOL; // CT 9-2 FAN 1 Stop Cmd
+	HS_909_1601_202_01_Open : BOOL; // CT 9-2 Inlet Valve Open Cmd
+	HS_909_1601_202_01_Close : BOOL; // CT 9-2 Inlet Valve Close Cmd
+	HS_909_1601_202_02_Open : BOOL; // CT 9-2 Outlet Valve Open Cmd
+	HS_909_1601_202_02_Close : BOOL; // CT 9-2 Outlet Valve Close Cmd
+	HS_909_1603_102_Start : BOOL; // MUP 9-2 Start cmd
+	HS_909_1603_102_Stop : BOOL; // MUP 9-2 Stop cmd
+	HS_909_2601_101_Start : BOOL; // GEN EAF 9-1 Start Cmd
+	HS_909_2601_101_Stop : BOOL; // GEN EAF 9-1 Stop Cmd
+	HS_909_1604_101_Start : BOOL; // CWP 9-1 Start Cmd
+	HS_909_1604_101_Stop : BOOL; // CWP 9-1 Stop Cmd
+	HS_909_2601_102_Start : BOOL; // GEN EAF 9-2 Start Cmd
+	HS_909_2601_102_Stop : BOOL; // GEN EAF 9-2 Stop Cmd
+	HS_909_1604_102_Start : BOOL; // CWP 9-2 Start Cmd
+	HS_909_1604_102_Stop : BOOL; // CWP 9-2 Stop Cmd
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

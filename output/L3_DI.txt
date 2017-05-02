@@ -1,0 +1,62 @@
+DATA_BLOCK "DB_DIGITAL_IN"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	HSI_903_1001_101_01 : BOOL; // MAU 3-1 Auto/Manual
+	QI_903_1001_101 : BOOL; // MAU 3-1 Run/Stop
+	QA_903_1001_101_01 : BOOL; // MAU 3-1 Trip
+	MD_903_1001_101_01 : BOOL; // MAU 3-1 Supply Air Duct Damper Open
+	MD_903_1001_101_02 : BOOL; // MAU 3-1 Supply Air Duct Damper Close
+	HSI_903_1001_101_02 : BOOL; // MAU 3-1 Supply Duct Air Damper Auto/Manual
+	SD_903_1001_101 : BOOL; // MAU 3-1 Smoke Detector 
+	SS_903_1001_101 : BOOL; // MAU 3-1 Sequence Selector Switch
+	PDSL_903_1001_101 : BOOL; // MAU 3-1 Belt Burst (PDSL)
+	PDSH_903_1001_101 : BOOL; // MAU 3-1 Filter Dirty (PDSH)
+	QA_903_1001_101_02 : BOOL; // MAU 3-1 1-Ph Pwr Healthy
+	QA_903_1001_101_03 : BOOL; // MAU 3-1 3-Ph Pwr Healthy
+	HSI_903_1001_102_01 : BOOL; // MAU 3-2 Auto/Manual
+	QI_903_1001_102 : BOOL; // MAU 3-2 Run/Stop
+	QA_903_1001_102_01 : BOOL; // MAU 3-2 Trip
+	MD_903_1001_102_01 : BOOL; // MAU 3-2 Supply Air Duct Damper Open
+	MD_903_1001_102_02 : BOOL; // MAU 3-2 Supply Air Duct Damper Close
+	HSI_903_1001_102_02 : BOOL; // MAU 3-2 Supply Duct Air Damper Auto/Manual
+	SD_903_1001_102 : BOOL; // MAU 3-2 Smoke Detector 
+	SS_903_1001_102 : BOOL; // MAU 3-2 Sequence Selector Switch
+	PDSL_903_1001_102 : BOOL; // MAU 3-2 Belt Burst (PDSL)
+	PDSH_903_1001_102 : BOOL; // MAU 3-2 Filter Dirty (PDSH)
+	QA_903_1001_102_02 : BOOL; // MAU 3-2 1-Ph Pwr Healthy
+	QA_903_1001_102_03 : BOOL; // MAU 3-2 3-Ph Pwr Healthy
+	HSI_903_1101_101_02 : BOOL; // DC Pump 3-1 Auto/Manual
+	QI_903_1101_101 : BOOL; // DC Pump 3-1 Run/Stop
+	QA_903_1101_101_01 : BOOL; // DC Pump 3-1 Trip
+	SS_903_1101_101 : BOOL; // DC Pump 3-1 Sequence Selector Switch
+	QA_903_1101_101_02 : BOOL; // DC Pump 3-1 1-Ph Pwr Healthy
+	QA_903_1101_101_03 : BOOL; // DC Pump 3-1 3-Ph Pwr Healthy
+	HSI_903_1101_102_02 : BOOL; // DC Pump 3-2 Auto/Manual
+	QI_903_1101_102 : BOOL; // DC Pump 3-2 Run/Stop
+	QA_903_1101_102_01 : BOOL; // DC Pump 3-2 Trip
+	SS_903_1101_102 : BOOL; // DC Pump 3-2 Sequence Selector Switch
+	QA_903_1101_102_02 : BOOL; // DC Pump 3-2 1-Ph Pwr Healthy
+	QA_903_1101_102_03 : BOOL; // DC Pump 3-2 3-Ph Pwr Healthy
+	PWR_903_0801_101 : BOOL; // L3 PE Elect Panel  Incoming Power Status
+	PWR_903_0801_102 : BOOL; // L3 SE Elect Panel  Incoming Power Status
+	QA_903_4801_101_01 : BOOL; // FFU-903-0501-001 L3 PWAX DRY CR FFU  TRIP Common Alarm
+	QA_903_4801_101_02 : BOOL; // FFU-903-0501-001 L3 PWAX DRY CR FFU  3-Phase Power Status 
+	QA_903_0801_101_01 : BOOL; // PLC-903-101  PLC Panel Fan Faulty Alarm  
+	QI_903_1301_101 : BOOL; // DX FCU0301-0306  FCU On/Off Status
+	QA_903_1301_101_01 : BOOL; // DX FCU0301-0306 FCU Trip
+	HSI_903_1301_101_01 : BOOL; // DX FCU0301-0306  FCU Auto/Manual
+	QA_903_4801_102_01 : BOOL; // FFU-902-0501-001 L3 PWAX WET CR FFU TRIP Common Alarm 
+	QA_903_4801_102_02 : BOOL; // FFU-902-0501-001 L3 PWAX WET CR FFU 3-Phase Power Status 
+	QA_903_4801_103_01 : BOOL; // FFU-903-0502-001 L3 PWAX LPC CR FFU TRIP Common Alarm 
+	QA_903_4801_103_02 : BOOL; // FFU-903-0502-001 L3 PWAX LPC CR FFU TRIP 3-Phase Power Status 
+	QA_903_4801_104_01 : BOOL; // FFU-903-0503-001 L3 PWAX GOWNING AREA FFU TRIP Common Alarm 
+	QA_903_4801_104_02 : BOOL; // FFU-903-0503-001 L3 PWAX GOWNING AREA FFU 3-Phase Power Status 
+	QA_903_4801_105_01 : BOOL; // FFU-903-0504-001 L3-PWAX MATL TRANSFER ROOM FFU TRIP Common Alarm 
+	QA_903_4801_105_02 : BOOL; // FFU-903-0504-001 L3-PWAX MATL TRANSFER ROOM FFU  3-Phase Power Status 
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

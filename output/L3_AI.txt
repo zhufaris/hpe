@@ -1,0 +1,112 @@
+DATA_BLOCK "DB_ANALOG_IN"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	SPIT_903_1001_201_01 : "UDT_CM_InAnlg"; // MAU 3-1/2 Main Duct Static Press
+	SPIT_903_1001_201_02 : "UDT_CM_InAnlg"; // PWAX Cleam Room Static Press
+	TIT_903_1001_201_01 : "UDT_CM_InAnlg"; // MAU 3-1/2 CHWS Temp
+	TIT_903_1001_201_02 : "UDT_CM_InAnlg"; // MAU 3-1/2 CHWR Temp
+	TIT_903_1001_101_01 : "UDT_CM_InAnlg"; // MAU 3-1 Precool Offcoil Temperature
+	TIT_903_1001_101_02 : "UDT_CM_InAnlg"; // MAU 3-1 Preheat Offcoil Temperature
+	TIT_903_1001_102_01 : "UDT_CM_InAnlg"; // MAU 3-2 Precool Offcoil Temperature
+	TIT_903_1001_102_02 : "UDT_CM_InAnlg"; // MAU 3-2 Preheat Offcoil Temperature
+	TIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Supply Water Temp
+	TIT_903_1101_201_02 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Return Water Temp
+	PIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Pressure
+	PIT_903_1101_201_02 : "UDT_CM_InAnlg"; // Dry Coil Pumps EOL Pressure Transmitter 002 
+	TIT_903_1101_201_03 : "UDT_CM_InAnlg"; // Dry Coil CHW Supply Temp
+	PDIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil CHW S/R Press Differential
+	TIT_903_1001_101_03 : "UDT_CM_InAnlg"; // MAU 3-1 Reheat Offcoil Temperature
+	TIT_903_1001_102_03 : "UDT_CM_InAnlg"; // MAU 3-2 Reheat Offcoil Temperature
+	FIT_903_1001_201_01 : "UDT_CM_InAnlg"; // MAU 3-1/2  Supply Header Flow
+	SF_903_1001_101 : "UDT_CM_InAnlg"; // MAU 3-1 VSD Speed FB
+	SF_903_1001_102 : "UDT_CM_InAnlg"; // MAU 3-2 VSD Speed FB
+	FIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Flow rate
+	SF_903_1101_101 : "UDT_CM_InAnlg"; // Dry Coil Pump 3-1 VSD Speed FB
+	SF_903_1101_102 : "UDT_CM_InAnlg"; // Dry Coil Pump 3-2 VSD Speed FB
+	FIT_903_5101_201 : "UDT_CM_InAnlg"; // L3 PWAX   CO2 Supply Flowrate 
+	FIT_903_4701_201 : "UDT_CM_InAnlg"; // L3 PWAX N2 Supply Flowrate  
+	TIT_903_1101_101_01 : "UDT_CM_InAnlg"; // DC HEX 3-1 Temp
+	TIT_903_1101_102_01 : "UDT_CM_InAnlg"; // DC HEX 3-2 Temp
+	PDIT_903_1001_301_01 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Pressure differential transmitter 001 
+	PDIT_903_1001_301_02 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Pressure differential transmitter 002
+	PDIT_903_1001_301_03 : "UDT_CM_InAnlg"; // L3 Changing Room Pressure differential transmitter 003 
+	PDIT_903_1001_301_04 : "UDT_CM_InAnlg"; // L3 LPC Pressure differential transmitter 004
+	TIT_903_1001_401_01 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Temp 001 Transmitter 
+	RHIT_903_1001_401_01 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Humidity 001 Transmitter 
+	TIT_903_1001_401_02 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Temp 002 Transmitter 
+	RHIT_903_1001_401_02 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Humidity 002 Transmitter 
+	TIT_903_1001_401_03 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Temp 003 Transmitter 
+	RHIT_903_1001_401_03 : "UDT_CM_InAnlg"; // L3 PWAX 1&2 Wet Area Room Humidity 003 Transmitter 
+	TIT_903_1001_401_04 : "UDT_CM_InAnlg"; // L3 LPC Room Temp 004 Transmitter 
+	RHIT_903_1001_401_04 : "UDT_CM_InAnlg"; // L3 LPC Room Humidity 004 Transmitter 
+	TIT_903_1001_401_05 : "UDT_CM_InAnlg"; // L3 Changing Room Temp 005 Transmitter 
+	RHIT_903_1001_401_05 : "UDT_CM_InAnlg"; // L3 Changing Room Humidity 005 Transmitter 
+	TIT_903_1001_401_05 : "UDT_CM_InAnlg"; // L3 Changing Room Temp 006 Transmitter 
+	RHIT_903_1001_401_06 : "UDT_CM_InAnlg"; // L3 Changing Room Humidity 006 Transmitter 
+	TIT_903_1001_401_07 : "UDT_CM_InAnlg"; // L3 Changing Room Temp 007 Transmitter 
+	RHIT_903_1001_401_07 : "UDT_CM_InAnlg"; // L3 Changing Room Humidity 007 Transmitter 
+	TIT_903_1001_401_08 : "UDT_CM_InAnlg"; // L3 Changing Room Temp 008 Transmitter 
+	RHIT_903_1001_401_08 : "UDT_CM_InAnlg"; // L3 Changing Room Humidity 008 Transmitter 
+	TIT_903_1101_301_01 : "UDT_CM_InAnlg"; // L3 Wet Coil PWAX C/R Wet Area Room Temperature Transmitter 001 
+	TIT_903_1101_301_02 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Wet Area Room Temperature Transmitter 002 
+	TIT_903_1101_301_03 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Wet Area Room Temperature Transmitter 003 
+	TIT_903_1101_301_04 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Wet Area Room Temperature Transmitter 004 
+	TIT_903_1101_301_05 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Wet Area Room Temperature Transmitter 005 
+	TIT_903_1101_301_06 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Dry Area Room Temperature Transmitter 006 
+	TIT_903_1101_301_07 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Dry Area Room Temperature Transmitter 007 
+	TIT_903_1101_301_08 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Dry Area Room Temperature Transmitter 008
+	TIT_903_1101_301_09 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX C/R Dry Area Room Temperature Transmitter 009 
+	TIT_903_1101_301_10 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX LPC Room Temperature Transmitter 0010 
+	TIT_903_1101_301_11 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX Gowning Room Temperature Transmitter 011 
+	TIT_903_1101_301_12 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX Mall Transfer Room Temperature Transmitter 012 
+	TIT_903_1101_301_13 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX Mall Transfer Room Temperature Transmitter 013 
+	TIT_903_1101_301_14 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX Mall Transfer Room Temperature Transmitter 014 
+	TIT_903_1101_301_15 : "UDT_CM_InAnlg"; // L3 Dry Coil PWAX Mall Transfer Room Temperature Transmitter 015
+	MPS_903_5501_101_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 001  5.0um Level
+	MPS_903_5501_101_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 001  0.5um Level
+	MPS_903_5501_101_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 001  Laser Level
+	MPS_903_5501_102_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 002 5.0um Level
+	MPS_903_5501_102_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 002  0.5um Level
+	MPS_903_5501_102_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 002  Laser Level
+	MPS_903_5501_103_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 003  5.0um Level
+	MPS_903_5501_103_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 003  0.5um Level
+	MPS_903_5501_103_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 003  Laser Level
+	MPS_903_5501_104_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 004  5.0um Level
+	MPS_903_5501_104_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 004  0.5um Level
+	MPS_903_5501_104_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 004  Laser Level
+	MPS_903_5501_105_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 005  5.0um Level
+	MPS_903_5501_105_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 005  0.5um Level
+	MPS_903_5501_105_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 005  Laser Level
+	MPS_903_5501_106_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 006  5.0um Level
+	MPS_903_5501_106_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 006  0.5um Level
+	MPS_903_5501_106_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 006  Laser Level
+	MPS_903_5501_107_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 007  5.0um Level
+	MPS_903_5501_107_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 007  0.5um Level
+	MPS_903_5501_107_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 007  Laser Level
+	MPS_903_5501_108_01 : "UDT_CM_InAnlg"; // L3 Particle Sensor 008  5.0um Level
+	MPS_903_5501_108_02 : "UDT_CM_InAnlg"; // L3 Particle Sensor 008  0.5um Level
+	MPS_903_5501_108_03 : "UDT_CM_InAnlg"; // L3 Particle Sensor 008  Laser Level
+	PIT_903_2301_301_01 : "UDT_CM_InAnlg"; // L3 PWAX DI supply pressure
+	PIT_903_2301_301_02 : "UDT_CM_InAnlg"; // L3 PWAX DI return pressure
+	TIT_903_2301_301_01 : "UDT_CM_InAnlg"; //  L3 PWAX DI supply temperature 
+	TIT_903_2301_301_02 : "UDT_CM_InAnlg"; //  L3 PWAX DI return temperature 
+	AIT_903_2301_301_01 : "UDT_CM_InAnlg"; //  L3 PWAX DI supply resistivity 
+	AIT_903_2301_301_02 : "UDT_CM_InAnlg"; //  L3 PWAX DI return resistivity 
+	FIT_903_2301_301_01 : "UDT_CM_InAnlg"; // L3 PWAX DI supply flow 
+	FIT_903_2301_301_02 : "UDT_CM_InAnlg"; // L3 PWAX DI return flow 
+	FIT_903_2801_201_01 : "UDT_CM_InAnlg"; // CDA Flow Rate for L3 PWAX 1/2
+	AIT_903_2801_201_01 : "UDT_CM_InAnlg"; // CDA Supply Dew Point Temperature for L3 PWAX 1/2
+	PIT_903_2801_201_01 : "UDT_CM_InAnlg"; // CDA distribution Line Pressure for L3 PWAX
+	TIT_903_1101_401_01 : "UDT_CM_InAnlg"; // DC HEX 3-1 Temp
+	TIT_903_1101_402_01 : "UDT_CM_InAnlg"; // DC HEX 3-2 Temp
+	TIT_903_1301_101_01 : "UDT_CM_InAnlg"; // DX FCU0301-0306 Room Temperature in L03 IDF Room  
+	PIT_903_5101_201 : "UDT_CM_InAnlg"; // L3 PWAX   CO2 Distribution Pressure 
+	PIT_903_4701_201 : "UDT_CM_InAnlg"; //  L3 PWAX N2 Distribution Pressure    
+	PIT_902_3401_201 : "UDT_CM_InAnlg"; // L3 PWAX PV Distribution Pressure
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

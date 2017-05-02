@@ -1,0 +1,22 @@
+DATA_BLOCK "DB_DIGITAL_OUT"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	HS_903_1001_101_Start : BOOL; // MAU 3-1 Start Cmd
+	HS_903_1001_101_Stop : BOOL; // MAU 3-1 Stop Cmd
+	HS_903_1001_101_Reset : BOOL; // MAU 3-1 Reset PDSL Alarm Cmd
+	HS_903_1101_101_Start : BOOL; // DC Pump 3-1 Start Cmd
+	HS_903_1101_101_Stop : BOOL; // DC Pump 3-1 Stop Cmd
+	HS_903_1301_101_Start : BOOL; // DX FCU0301-0306  FCU Start Cmd
+	HS_903_1301_101_Stop : BOOL; // DX FCU0301-0306 FCU Stop Cmd
+	HS_903_1001_102_Start : BOOL; // MAU 3-2 Start Cmd
+	HS_903_1001_102_Stop : BOOL; // MAU 3-2 Stop Cmd
+	HS_903_1001_102_Reset : BOOL; // MAU 3-2 Reset PDSL Alarm Cmd
+	HS_903_1101_102_Start : BOOL; // DC Pump 3-2 Start Cmd
+	HS_903_1101_102_Stop : BOOL; // DC Pump 3-2 Stop Cmd
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK
