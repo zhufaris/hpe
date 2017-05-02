@@ -34,8 +34,8 @@ set "python=env\Scripts\python"
 
 ::%python% export.py > output\demo_result.txt
 
-python ai_struct_type.py "L2 Analog Input" > output\L2_AI_STRUCT.txt
-python ai_struct_type.py "L3 Analog Input" > output\L3_AI_STRUCT.txt
-python ai_struct_type.py "L9 Analog Input" > output\L9_AI_STRUCT.txt
+%python% ai_struct_type.py "L2 Analog Input" > output\L2_AI_STRUCT.txt
+%python% ai_struct_type.py "L3 Analog Input" > output\L3_AI_STRUCT.txt
+%python% ai_struct_type.py "L9 Analog Input" > output\L9_AI_STRUCT.txt
 
 pause 'Press [Enter] key to continue...'

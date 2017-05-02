@@ -60,6 +60,3 @@ if __name__ == "__main__":
     for index, row in df1.iterrows():
         print splitaddress(row['Addr'])
     print root_dir
-
-
-
