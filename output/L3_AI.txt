@@ -7,10 +7,10 @@ DATA_BLOCK "DB_ANALOG_IN"
 	SPIT_903_1001_201_02 : "UDT_CM_InAnlg"; // PWAX Cleam Room Static Press
 	TIT_903_1001_201_01 : "UDT_CM_InAnlg"; // MAU 3-1/2 CHWS Temp
 	TIT_903_1001_201_02 : "UDT_CM_InAnlg"; // MAU 3-1/2 CHWR Temp
-	TIT_903_1001_101_01 : "UDT_CM_InAnlg"; // MAU 3-1 Precool Offcoil Temperature
-	TIT_903_1001_101_02 : "UDT_CM_InAnlg"; // MAU 3-1 Preheat Offcoil Temperature
-	TIT_903_1001_102_01 : "UDT_CM_InAnlg"; // MAU 3-2 Precool Offcoil Temperature
-	TIT_903_1001_102_02 : "UDT_CM_InAnlg"; // MAU 3-2 Preheat Offcoil Temperature
+	TIT_903_1001_101_01 : "UDT_CM_InAnlg"; // MAU 3-1 Offcoil Temperature 1
+	TIT_903_1001_101_02 : "UDT_CM_InAnlg"; // MAU 3-1 Offcoil Temperature 2
+	TIT_903_1001_102_01 : "UDT_CM_InAnlg"; // MAU 3-2 Offcoil Temperature 1
+	TIT_903_1001_102_02 : "UDT_CM_InAnlg"; // MAU 3-2 Offcoil Temperature 2
 	TIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Supply Water Temp
 	TIT_903_1101_201_02 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Return Water Temp
 	PIT_903_1101_201_01 : "UDT_CM_InAnlg"; // Dry Coil Pump Header Pressure

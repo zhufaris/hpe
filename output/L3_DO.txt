@@ -16,7 +16,7 @@ DATA_BLOCK "DB_DIGITAL_OUT"
 	HS_903_1101_102_Start : BOOL; // DC Pump 3-2 Start Cmd
 	HS_903_1101_102_Stop : BOOL; // DC Pump 3-2 Stop Cmd
 
-    END_STRUCT;	
+    END_STRUCT;
     BEGIN
 
 END_DATA_BLOCK
