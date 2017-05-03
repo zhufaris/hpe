@@ -57,49 +57,49 @@ NETWORK
 TITLE = 
 
       A     I      1.0; 
-      =     "DB_DIGITAL_IN".HSI_902_2601_101_01;
+      =     "DB_DIGITAL_IN".QA_902_2601_101_02;
 
 NETWORK
 TITLE = 
 
       A     I      1.1; 
-      =     "DB_DIGITAL_IN".QI_902_2601_101;
+      =     "DB_DIGITAL_IN".QA_902_2601_101_03;
 
 NETWORK
 TITLE = 
 
       A     I      1.2; 
-      =     "DB_DIGITAL_IN".QA_902_2601_101_01;
+      =     "DB_DIGITAL_IN".QA_902_0801_101_01;
 
 NETWORK
 TITLE = 
 
       A     I      1.3; 
-      =     "DB_DIGITAL_IN".PDSL_902_2601_101;
+      =     "DB_DIGITAL_IN".QA_902_0801_102_01;
 
 NETWORK
 TITLE = 
 
       A     I      1.4; 
-      =     "DB_DIGITAL_IN".MD_902_2601_101_01;
+      =     "DB_DIGITAL_IN".QA_902_0801_103_01;
 
 NETWORK
 TITLE = 
 
       A     I      1.5; 
-      =     "DB_DIGITAL_IN".MD_902_2601_101_02;
+      =     "DB_DIGITAL_IN".QA_902_0801_104_01;
 
 NETWORK
 TITLE = 
 
       A     I      1.6; 
-      =     "DB_DIGITAL_IN".HSI_902_2601_101_02;
+      =     "DB_DIGITAL_IN".QA_902_3401_101_01;
 
 NETWORK
 TITLE = 
 
       A     I      1.7; 
-      =     "DB_DIGITAL_IN".SS_902_2601_101;
+      =     "DB_DIGITAL_IN".QA_902_3401_101_02;
 
 NETWORK
 TITLE = 
