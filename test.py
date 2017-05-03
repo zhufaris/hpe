@@ -52,6 +52,7 @@ def splitrange(rangevalue):
     if match:
         pass
 
+
 if __name__ == "__main__":
     df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4, 5, 6], skiprows=[0, 1])
     print df.head()
