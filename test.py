@@ -50,7 +50,7 @@ def splitrange(rangevalue):
         raise ValueError('Range empty!')
     match = re.match(r"([0-9]+)[-~]+([0-9]+)", rangevalue, flags=0)
     if match:
-        pass
+        return match.group(1) + ' ' + match.group(2)
 
 
 if __name__ == "__main__":
