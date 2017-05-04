@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import pprint
+from pprint import pprint
 import re
 import os
 
@@ -13,7 +13,7 @@ tagslib = pd.ExcelFile(tag_dir)
 #df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4, 5, 6], skiprows=[0, 1])
 #print df.head(n=5)
 
-#pprint.pprint(getcolumns(df))
+#pprint(getcolumns(df))
 def getcolumns(dataframe1):
     return dataframe1.columns.values.tolist()
 
@@ -58,7 +58,7 @@ def int_to_hex(number):
     return '{:03x}'.format(number)
 
 if __name__ == "__main__":
-    df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4, 5, 6], skiprows=[0, 1])
+    df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4,5,6], skiprows=[0, 1])
     print df.head()
     print df.columns
     df1 = getalltags('L3 Analog Input')
