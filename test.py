@@ -46,18 +46,22 @@ def splitaddress(address):
         raise ValueError('Address format wrong!')
 
 def splitrange(rangevalue):
-    if not rangevalue:
-        raise ValueError('Range empty!')
-    match = re.match(r"([0-9]+)[-~]+([0-9]+)", rangevalue, flags=0)
+    if not pd.notnull(rangevalue):
+        return '', ''
+    match = re.match(r"([0-9]+)\s?[-~]\s?([0-9X]+)", rangevalue, flags=0)
     if match:
-        return match.group(1) + ' ' + match.group(2)
+        return match.group(1), match.group(2)
+    else:
+        raise ValueError('Invalid range format!')
 
+def int_to_hex(number):
+    return '{:03x}'.format(number)
 
 if __name__ == "__main__":
     df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4, 5, 6], skiprows=[0, 1])
     print df.head()
     print df.columns
-    df1 = getalltags('L3 Digital Input')
+    df1 = getalltags('L3 Analog Input')
     for index, row in df1.iterrows():
-        print splitaddress(row['Addr'])
+        print splitrange(row['RANGE'])
     print root_dir
