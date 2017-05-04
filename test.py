@@ -43,7 +43,7 @@ def splitaddress(address):
     if match:
         return match.group(1) + ' '*6 + match.group(2)
     else:
-        raise ValueError('Address format wrong!')
+        raise ValueError('Invalid address format!')
 
 def splitrange(rangevalue):
     if not pd.notnull(rangevalue):
