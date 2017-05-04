@@ -42,9 +42,9 @@ def main():
 
     for index, row in df1.iterrows():
         number = number + 1
-        high, low = test.splitrange(row['RANGE'])
+        low, high = test.splitrange(row['RANGE'])
         hexnumber = test.int_to_hex(number)  
-        print template.format(test.replacedash(row['TagName']), low, high, hexnumber)
+        print template.format(test.replacedash(row['TagName']), high, low, hexnumber)
         
 
     print footer

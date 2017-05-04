@@ -38,8 +38,9 @@ set "python=env\Scripts\python"
 %python% ai_struct_type.py "L3 Analog Input" > output\L3_AI_STRUCT.txt
 %python% ai_struct_type.py "L9 Analog Input" > output\L9_AI_STRUCT.txt
 
-
+python fc_analog_in.py "L2 Analog Input" > output\L2_FC_AI.awl
 python fc_analog_in.py "L3 Analog Input" > output\L3_FC_AI.awl
+python fc_analog_in.py "L9 Analog Input" > output\L9_FC_AI.awl
 
 
 pause 'Press [Enter] key to continue...'
