@@ -48,7 +48,7 @@ def splitaddress(address):
 def splitrange(rangevalue):
     if not pd.notnull(rangevalue):
         return '', ''
-    match = re.match(r"([0-9]+)\s?[-~]\s?([0-9X]+)", rangevalue, flags=0)
+    match = re.match(r"([0-9]+)\s*[-~]\s*([0-9X]+)", rangevalue, flags=0)
     if match:
         return match.group(1), match.group(2)
     else:
