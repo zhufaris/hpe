@@ -31,7 +31,7 @@ TITLE =
       L     27648; 
       <=I   ; 
       )     ; 
-      JNB   _001; 
+      JNB   _{3}; 
       CALL "TYP_AI_SCALE" (
            Low_Limit                := 0.000000e+000,
            High_Limit               := 1.000000e+002,
