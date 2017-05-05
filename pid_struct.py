@@ -1,5 +1,6 @@
 import pid_info
 import sys
+import re
 
 reload(pid_info)
 
@@ -9,11 +10,16 @@ Name	Data type	Length	Format adaptation	Connection	Group	Address	Linear scaling	
 
 template = '''{0}	PID	0		{1}		{2}	0									0	0	0	0	0	0	0	'''
 
-def main(value):
+def main():
     groupbase = 'DB4,DBB'
     number = 0
     sheet_name = sys.argv[1] 
     df1= pid_info.getalltags(sheet_name)
+    match = re.search(r'(\d)', sheet_name, flags=0)
+    if match:
+        value = 'CPU' + match.group(1) + '_1'
+    else:
+        raise ValueError('Wrong sheetname format!')
 
     print header
 
@@ -24,4 +30,4 @@ def main(value):
     
 
 if __name__ == '__main__':
-    main("NewConnection_1")
+    main()

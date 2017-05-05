@@ -75,7 +75,7 @@ def main():
     df1= test.getalltags(sheet_name)
     print header
     for index, row in df1.iterrows():
-        print template.format(row['Addr'], test.splitaddress(row['Addr']) ,test.replacedash(row['TagName']),test.int_to_hex(number))
+        print template.format(row['Addr'], test.splitaddress(row['Addr']), test.replacedash(row['TagName']), test.int_to_hex(number))
         number = number + 1
     print footer
 

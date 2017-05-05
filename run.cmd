@@ -42,7 +42,7 @@ python fc_analog_in.py "L2 Analog Input" > output\L2_FC_AI.awl
 python fc_analog_in.py "L3 Analog Input" > output\L3_FC_AI.awl
 python fc_analog_in.py "L9 Analog Input" > output\L9_FC_AI.awl
 
-python pid_struct.py "Sheet1" > output\PID_STRUCT.awl
+python pid_struct.py "L3 PID" > output\PID_STRUCT.awl
 
 
 pause 'Press [Enter] key to continue...'
