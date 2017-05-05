@@ -5,7 +5,7 @@ import re
 import os
 
 root_dir = os.path.dirname(os.path.abspath(__file__))
-tag_dir = os.path.join(root_dir, r"data\HPI BLOCKB_PLC Point to Point Check V2.xls")
+tag_dir = os.path.join(root_dir, r"data\HPI BLOCKB_PLC Point to Point Check V4.xls")
 tagslib = pd.ExcelFile(tag_dir)
 
 # print tagslib.sheet_names
