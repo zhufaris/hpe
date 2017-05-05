@@ -1,0 +1,65 @@
+DATA_BLOCK "DB_DIGITAL_IN"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	HSI_902_2601_101_01 : BOOL; // PRO EAF 2-1 Auto/Manual
+	QI_902_2601_101 : BOOL; // PRO EAF 2-1 Run/Stop
+	QA_902_2601_101_01 : BOOL; // PRO EAF 2-1 Trip
+	PDSL_902_2601_101 : BOOL; // PRO EAF 2-1 Pressure Differential Switch (Low) (PDSL)
+	MD_902_2601_101_01 : BOOL; // PRO EAF 2-1 Motorized Damper Open
+	MD_902_2601_101_02 : BOOL; // PRO EAF 2-1 Motorized Damper Close
+	HSI_902_2601_101_02 : BOOL; // PRO EAF 2-1 Motorized Damper Auto/Manual
+	SS_902_2601_101 : BOOL; // PRO EAF 2-1 Sequence Selector Switch
+	QA_902_2601_101_02 : BOOL; // PRO EAF 2-1 1-Ph Pwr Healthy
+	QA_902_2601_101_03 : BOOL; // PRO EAF 2-1 3-Ph Pwr Healthy
+	QA_902_0801_101_01 : BOOL; // UPS-902-0801-001 UPS Load on Inverter 
+	QA_902_0801_102_01 : BOOL; // UPS-902-0801-002 UPS Load on Main  
+	QA_902_0801_103_01 : BOOL; // UPS-902-0801-003 UPS Load on Bypass Mains 
+	QA_902_0801_104_01 : BOOL; // UPS-902-0801-001 UPS Load on Battery  
+	QA_902_3401_101_01 : BOOL; // PV Pump 2-1 1-Ph Pwr Healthy
+	QA_902_3401_101_02 : BOOL; // PV Pump 2-1 3-Ph Pwr Healthy
+	HSI_902_2601_102_01 : BOOL; // PRO EAF 2-2 Auto/Manual
+	QI_902_2601_102 : BOOL; // PRO EAF 2-2 Run/Stop
+	QA_902_2601_102_01 : BOOL; // PRO EAF 2-2 Trip
+	PDSL_902_2601_102 : BOOL; // PRO EAF 2-2 Pressure Differential Switch (Low) (PDSL)
+	MD_902_2601_102_01 : BOOL; // PRO EAF 2-2 Motorized Damper Open
+	MD_902_2601_102_02 : BOOL; // PRO EAF 2-2 Motorized Damper Close
+	HSI_902_2601_102_02 : BOOL; // PRO EAF 2-2 Motorized Damper Auto/Manual
+	SS_902_2601_102 : BOOL; // PRO EAF 2-2 Sequence Selector Switch
+	QA_902_2601_102_02 : BOOL; // PRO EAF 2-2 1-Ph Pwr Healthy
+	QA_902_2601_102_03 : BOOL; // PRO EAF 2-2 3-Ph Pwr Healthy
+	QI_902_1301_101 : BOOL; // DX FCU0201-0204 FCU On/Off Status
+	QA_902_1301_101_01 : BOOL; // DX FCU0201-0204 FCU Trip
+	HSI_902_1301_101_01 : BOOL; // DX FCU0201-0204 FCU Auto/Manual
+	QA_902_3401_102_01 : BOOL; // PV Pump 2-2 1-Ph Pwr Healthy
+	QA_902_3401_102_02 : BOOL; // PV Pump 2-2 3-Ph Pwr Healthy
+	HSI_902_2602_101_01 : BOOL; // PRO EAF 2-3 Auto/Manual
+	QI_902_2602_101 : BOOL; // PRO EAF 2-3 Run/Stop
+	QA_902_2602_101_01 : BOOL; // PRO EAF 2-3 Trip
+	PDSL_902_2602_101 : BOOL; // PRO EAF 2-3 Pressure Differential Switch (Low) (PDSL)
+	MD_902_2602_101_01 : BOOL; // PRO EAF 2-3 Motorized Damper Open
+	MD_902_2602_101_02 : BOOL; // PRO EAF 2-3 Motorized Damper Close
+	HSI_902_2602_101_02 : BOOL; // PRO EAF 2-3 Motorized Damper Auto/Manual
+	SS_902_2602_101 : BOOL; // PRO EAF 2-3 Sequence Selector Switch
+	QA_902_2602_101_02 : BOOL; // PRO EAF 2-3 1-Ph Pwr Healthy
+	QA_902_2602_101_03 : BOOL; // PRO EAF 2-3 3-Ph Pwr Healthy
+	QA_902_3401_103_01 : BOOL; // PV Pump 2-3 1-Ph Pwr Healthy
+	QA_902_3401_103_02 : BOOL; // PV Pump 2-3 3-Ph Pwr Healthy
+	HSI_902_2602_102_01 : BOOL; // PRO EAF 2-4 Auto/Manual
+	QI_902_2602_102 : BOOL; // PRO EAF 2-4 Run/Stop
+	QA_902_2602_102_01 : BOOL; // PRO EAF 2-4 Trip
+	PDSL_902_2602_102 : BOOL; // PRO EAF 2-4 Pressure Differential Switch (Low) (PDSL)
+	MD_902_2602_102_01 : BOOL; // PRO EAF 2-4 Motorized Damper Open
+	MD_902_2602_102_02 : BOOL; // PRO EAF 2-4 Motorized Damper Close
+	HSI_902_2602_102_02 : BOOL; // PRO EAF 2-4 Motorized Damper Auto/Manual
+	SS_902_2602_102 : BOOL; // PRO EAF 2-4 Sequence Selector Switch
+	QA_902_2602_102_02 : BOOL; // PRO EAF 2-4 1-Ph Pwr Healthy
+	QA_902_2602_102_03 : BOOL; // PRO EAF 2-4 3-Ph Pwr Healthy
+	QA_902_3401_104_01 : BOOL; // PV Pump 2-4 1-Ph Pwr Healthy
+	QA_902_3401_104_02 : BOOL; // PV Pump 2-4 3-Ph Pwr Healthy
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

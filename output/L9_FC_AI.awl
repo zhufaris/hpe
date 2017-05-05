@@ -1,0 +1,490 @@
+FUNCTION "FC_ANALOG_IN" : VOID
+TITLE =
+VERSION : 0.1
+
+BEGIN
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     10; 
+      T     "DB_ANALOG_IN".SPIT_909_2601_201_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _001; 
+      L     0; 
+      T     "DB_ANALOG_IN".SPIT_909_2601_201_01.MIN_EU; 
+_001: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SPIT_909_2601_201_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     10; 
+      T     "DB_ANALOG_IN".SPIT_909_2601_201_02.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _002; 
+      L     0; 
+      T     "DB_ANALOG_IN".SPIT_909_2601_201_02.MIN_EU; 
+_002: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SPIT_909_2601_201_02);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".TIT_909_1601_201_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _003; 
+      L     0; 
+      T     "DB_ANALOG_IN".TIT_909_1601_201_01.MIN_EU; 
+_003: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".TIT_909_1601_201_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".TIT_909_1601_201_02.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _004; 
+      L     0; 
+      T     "DB_ANALOG_IN".TIT_909_1601_201_02.MIN_EU; 
+_004: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".TIT_909_1601_201_02);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".TIT_909_1601_202_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _005; 
+      L     0; 
+      T     "DB_ANALOG_IN".TIT_909_1601_202_01.MIN_EU; 
+_005: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".TIT_909_1601_202_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".TIT_909_1601_202_02.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _006; 
+      L     0; 
+      T     "DB_ANALOG_IN".TIT_909_1601_202_02.MIN_EU; 
+_006: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".TIT_909_1601_202_02);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     150; 
+      T     "DB_ANALOG_IN".PIT_909_1604_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _007; 
+      L     0; 
+      T     "DB_ANALOG_IN".PIT_909_1604_101.MIN_EU; 
+_007: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".PIT_909_1604_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     150; 
+      T     "DB_ANALOG_IN".PIT_909_1604_102.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _008; 
+      L     0; 
+      T     "DB_ANALOG_IN".PIT_909_1604_102.MIN_EU; 
+_008: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".PIT_909_1604_102);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_2601_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _009; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_2601_101.MIN_EU; 
+_009: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_2601_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_2601_102.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00a; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_2601_102.MIN_EU; 
+_00a: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_2601_102);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1601_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00b; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1601_101.MIN_EU; 
+_00b: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1601_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1602_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00c; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1602_101.MIN_EU; 
+_00c: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1602_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     XXX; 
+      T     "DB_ANALOG_IN".FIT_909_1601_201_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00d; 
+      L     0; 
+      T     "DB_ANALOG_IN".FIT_909_1601_201_01.MIN_EU; 
+_00d: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".FIT_909_1601_201_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     XXX; 
+      T     "DB_ANALOG_IN".FIT_909_1601_202_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00e; 
+      L     0; 
+      T     "DB_ANALOG_IN".FIT_909_1601_202_01.MIN_EU; 
+_00e: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".FIT_909_1601_202_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1603_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _00f; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1603_101.MIN_EU; 
+_00f: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1603_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1603_102.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _010; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1603_102.MIN_EU; 
+_010: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1603_102);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     XXX; 
+      T     "DB_ANALOG_IN".LIT_909_1603_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _011; 
+      L     0; 
+      T     "DB_ANALOG_IN".LIT_909_1603_101.MIN_EU; 
+_011: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".LIT_909_1603_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     150; 
+      T     "DB_ANALOG_IN".PIT_909_1603_101_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _012; 
+      L     0; 
+      T     "DB_ANALOG_IN".PIT_909_1603_101_01.MIN_EU; 
+_012: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".PIT_909_1603_101_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     XXX; 
+      T     "DB_ANALOG_IN".LIT_909_1603_102.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _013; 
+      L     0; 
+      T     "DB_ANALOG_IN".LIT_909_1603_102.MIN_EU; 
+_013: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".LIT_909_1603_102);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     150; 
+      T     "DB_ANALOG_IN".PIT_909_1603_102_01.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _014; 
+      L     0; 
+      T     "DB_ANALOG_IN".PIT_909_1603_102_01.MIN_EU; 
+_014: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".PIT_909_1603_102_01);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1604_101.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _015; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1604_101.MIN_EU; 
+_015: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1604_101);
+      NOP   0;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     50; 
+      T     "DB_ANALOG_IN".SF_909_1604_102.MAX_EU; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+      A     BR; 
+      )     ; 
+      JNB   _016; 
+      L     0; 
+      T     "DB_ANALOG_IN".SF_909_1604_102.MIN_EU; 
+_016: NOP   0; 
+NETWORK
+TITLE =
+
+      CALL "TYP_ANALOG_IN" (
+           ANALOG_IN                := "DB_ANALOG_IN".SF_909_1604_102);
+      NOP   0;
+
+END_FUNCTION

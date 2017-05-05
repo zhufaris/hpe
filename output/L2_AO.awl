@@ -1,0 +1,14 @@
+DATA_BLOCK "DB_ANALOG_OUT"
+    TITLE =
+    VERSION : 0.1
+
+    STRUCT
+	SC_902_2601_101 : "UDT_CM_OutAnlg"; // PRO EAF 2-1 VSD Speed Control
+	SC_902_2602_101 : "UDT_CM_OutAnlg"; // PRO EAF 2-3 VSD Speed Control
+	SC_902_2601_102 : "UDT_CM_OutAnlg"; // PRO EAF 2-2 VSD Speed Control
+	SC_902_2602_102 : "UDT_CM_OutAnlg"; // PRO EAF 2-4 VSD Speed Control
+
+    END_STRUCT;	
+    BEGIN
+
+END_DATA_BLOCK

@@ -1,5 +1,4 @@
 *.pyc
-*.awl
 *.pyproj
 env/
 data/

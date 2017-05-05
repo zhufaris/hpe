@@ -1,0 +1,5468 @@
+
+FUNCTION "FC_AI_MAPPING" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  PIW512_DI : DINT ;	
+END_VAR
+BEGIN
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      9; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      9; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _001; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      9,
+           Scaled                   := "DB_ANALOG_IN".SPIT_903_1001_201_01.IN_VALUE_IO);
+_001: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      9; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      9; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      9; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      9; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      11; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      11; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _002; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      11,
+           Scaled                   := "DB_ANALOG_IN".SPIT_903_1001_201_02.IN_VALUE_IO);
+_002: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      11; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      11; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      11; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      11; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SPIT_903_1001_201_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      13; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      13; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _003; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      13,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_201_01.IN_VALUE_IO);
+_003: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      13; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      13; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      13; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      13; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      15; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      15; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _004; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      15,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_201_02.IN_VALUE_IO);
+_004: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      15; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      15; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      15; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      15; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_201_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      17; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      17; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _005; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      17,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_101_01.IN_VALUE_IO);
+_005: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      17; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      17; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      17; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      17; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      19; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      19; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _006; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      19,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_101_02.IN_VALUE_IO);
+_006: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      19; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      19; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      19; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      19; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_101_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      21; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      21; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _007; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      21,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_102_01.IN_VALUE_IO);
+_007: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      21; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      21; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      21; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      21; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      23; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      23; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _008; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      23,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_102_02.IN_VALUE_IO);
+_008: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      23; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      23; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      23; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      23; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_102_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      25; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      25; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _009; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      25,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_201_01.IN_VALUE_IO);
+_009: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      25; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      25; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      25; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      25; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      27; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      27; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      27,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_201_02.IN_VALUE_IO);
+_00a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      27; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      27; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      27; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      27; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      29; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      29; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      29,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_1101_201_01.IN_VALUE_IO);
+_00b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      29; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      29; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      29; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      29; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      31; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      31; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      31,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_1101_201_02.IN_VALUE_IO);
+_00c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      31; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      31; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      31; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      31; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_1101_201_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      33; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      33; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      33,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_201_03.IN_VALUE_IO);
+_00d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      33; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      33; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      33; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      33; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_201_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      35; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      35; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      35,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1101_201_01.IN_VALUE_IO);
+_00e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      35; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1101_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      35; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1101_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      35; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      35; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1101_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      37; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      37; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _00f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      37,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_401_01.IN_VALUE_IO);
+_00f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      37; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_401_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      37; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_401_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      37; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      37; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_401_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      39; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      39; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _010; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      39,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_402_01.IN_VALUE_IO);
+_010: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      39; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_402_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      39; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_402_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      39; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      39; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_402_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      41; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      41; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _011; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      41,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_1001_201_01.IN_VALUE_IO);
+_011: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      41; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_1001_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      41; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_1001_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      41; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      41; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_1001_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      43; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      43; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _012; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      43,
+           Scaled                   := "DB_ANALOG_IN".SF_903_1001_101.IN_VALUE_IO);
+_012: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      43; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1001_101.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      43; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1001_101.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      43; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      43; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SF_903_1001_101.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      45; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      45; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _013; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      45,
+           Scaled                   := "DB_ANALOG_IN".SF_903_1001_102.IN_VALUE_IO);
+_013: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      45; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1001_102.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      45; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1001_102.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      45; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      45; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SF_903_1001_102.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      47; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      47; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _014; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      47,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_1101_201_01.IN_VALUE_IO);
+_014: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      47; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_1101_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      47; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_1101_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      47; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      47; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_1101_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      49; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      49; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _015; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      49,
+           Scaled                   := "DB_ANALOG_IN".SF_903_1101_101.IN_VALUE_IO);
+_015: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      49; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1101_101.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      49; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1101_101.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      49; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      49; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SF_903_1101_101.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      51; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      51; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _016; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      51,
+           Scaled                   := "DB_ANALOG_IN".SF_903_1101_102.IN_VALUE_IO);
+_016: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      51; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1101_102.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      51; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".SF_903_1101_102.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      51; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      51; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".SF_903_1101_102.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      53; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      53; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _017; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      53,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_5101_201.IN_VALUE_IO);
+_017: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      53; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_5101_201.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      53; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_5101_201.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      53; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      53; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_5101_201.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      55; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      55; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _018; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      55,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_4701_201.IN_VALUE_IO);
+_018: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      55; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_4701_201.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      55; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_4701_201.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      55; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      55; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_4701_201.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      57; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      57; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _019; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      57,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1001_301_01.IN_VALUE_IO);
+_019: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      57; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      57; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      57; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      57; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      59; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      59; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      59,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1001_301_02.IN_VALUE_IO);
+_01a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      59; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      59; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      59; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      59; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      61; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      61; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      61,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1001_301_03.IN_VALUE_IO);
+_01b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      61; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      61; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      61; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      61; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      63; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      63; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      63,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1001_301_04.IN_VALUE_IO);
+_01c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      63; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_04.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      63; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_04.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      63; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      63; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_04.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      65; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      65; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      65,
+           Scaled                   := "DB_ANALOG_IN".PDIT_903_1001_301_05.IN_VALUE_IO);
+_01d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      65; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_05.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      65; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_05.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      65; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      65; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PDIT_903_1001_301_05.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      73; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      73; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      73,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_01.IN_VALUE_IO);
+_01e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      73; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      73; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      73; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      73; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      75; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      75; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _01f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      75,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_01.IN_VALUE_IO);
+_01f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      75; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      75; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      75; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      75; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      77; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      77; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _020; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      77,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_02.IN_VALUE_IO);
+_020: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      77; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      77; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      77; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      77; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      79; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      79; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _021; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      79,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_02.IN_VALUE_IO);
+_021: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      79; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      79; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      79; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      79; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      81; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      81; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _022; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      81,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_03.IN_VALUE_IO);
+_022: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      81; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      81; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      81; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      81; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      83; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      83; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _023; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      83,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_03.IN_VALUE_IO);
+_023: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      83; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      83; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      83; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      83; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      85; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      85; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _024; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      85,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_04.IN_VALUE_IO);
+_024: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      85; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_04.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      85; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_04.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      85; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      85; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_04.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      87; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      87; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _025; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      87,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_04.IN_VALUE_IO);
+_025: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      87; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_04.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      87; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_04.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      87; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      87; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_04.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      89; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      89; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _026; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      89,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_IO);
+_026: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      89; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      89; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      89; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      89; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      91; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      91; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _027; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      91,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_05.IN_VALUE_IO);
+_027: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      91; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_05.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      91; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_05.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      91; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      91; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_05.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      93; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      93; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _028; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      93,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_IO);
+_028: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      93; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      93; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      93; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      93; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_05.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      95; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      95; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _029; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      95,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_06.IN_VALUE_IO);
+_029: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      95; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_06.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      95; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_06.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      95; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      95; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_06.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      97; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      97; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      97,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_07.IN_VALUE_IO);
+_02a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      97; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_07.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      97; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_07.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      97; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      97; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_07.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      99; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      99; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      99,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_07.IN_VALUE_IO);
+_02b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      99; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_07.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      99; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_07.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      99; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      99; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_07.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      101; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      101; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      101,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_08.IN_VALUE_IO);
+_02c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      101; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_08.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      101; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_08.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      101; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      101; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_08.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      103; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      103; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      103,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_08.IN_VALUE_IO);
+_02d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      103; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_08.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      103; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_08.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      103; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      103; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_08.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      105; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      105; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      105,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_09.IN_VALUE_IO);
+_02e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      105; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_09.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      105; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_09.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      105; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      105; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_09.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      107; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      107; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _02f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      107,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_09.IN_VALUE_IO);
+_02f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      107; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_09.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      107; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_09.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      107; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      107; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_09.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      109; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      109; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _030; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      109,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_10.IN_VALUE_IO);
+_030: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      109; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_10.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      109; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_10.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      109; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      109; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_10.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      111; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      111; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _031; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      111,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_10.IN_VALUE_IO);
+_031: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      111; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_10.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      111; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_10.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      111; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      111; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_10.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      113; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      113; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _032; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      113,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_11.IN_VALUE_IO);
+_032: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      113; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_11.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      113; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_11.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      113; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      113; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_11.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      115; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      115; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _033; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      115,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_11.IN_VALUE_IO);
+_033: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      115; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_11.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      115; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_11.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      115; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      115; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_11.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      117; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      117; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _034; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      117,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1001_401_12.IN_VALUE_IO);
+_034: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      117; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_12.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      117; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_12.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      117; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      117; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1001_401_12.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      119; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      119; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _035; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      119,
+           Scaled                   := "DB_ANALOG_IN".RHIT_903_1001_401_12.IN_VALUE_IO);
+_035: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      119; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_12.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      119; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_12.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      119; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      119; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".RHIT_903_1001_401_12.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      121; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      121; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _036; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      121,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_01.IN_VALUE_IO);
+_036: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      121; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      121; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      121; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      121; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      123; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      123; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _037; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      123,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_02.IN_VALUE_IO);
+_037: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      123; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      123; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      123; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      123; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      125; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      125; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _038; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      125,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_03.IN_VALUE_IO);
+_038: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      125; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      125; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      125; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      125; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      127; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      127; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _039; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      127,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_04.IN_VALUE_IO);
+_039: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      127; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_04.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      127; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_04.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      127; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      127; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_04.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      129; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      129; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      129,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_05.IN_VALUE_IO);
+_03a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      129; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_05.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      129; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_05.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      129; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      129; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_05.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      131; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      131; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      131,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_06.IN_VALUE_IO);
+_03b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      131; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_06.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      131; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_06.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      131; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      131; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_06.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      133; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      133; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      133,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_07.IN_VALUE_IO);
+_03c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      133; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_07.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      133; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_07.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      133; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      133; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_07.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      135; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      135; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      135,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_08.IN_VALUE_IO);
+_03d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      135; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_08.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      135; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_08.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      135; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      135; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_08.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      137; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      137; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      137,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_09.IN_VALUE_IO);
+_03e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      137; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_09.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      137; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_09.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      137; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      137; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_09.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      139; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      139; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _03f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      139,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_10.IN_VALUE_IO);
+_03f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      139; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_10.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      139; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_10.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      139; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      139; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_10.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      141; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      141; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _040; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      141,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_11.IN_VALUE_IO);
+_040: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      141; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_11.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      141; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_11.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      141; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      141; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_11.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      143; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      143; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _041; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      143,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_12.IN_VALUE_IO);
+_041: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      143; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_12.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      143; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_12.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      143; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      143; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_12.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      145; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      145; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _042; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      145,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_13.IN_VALUE_IO);
+_042: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      145; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_13.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      145; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_13.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      145; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      145; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_13.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      147; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      147; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _043; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      147,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_14.IN_VALUE_IO);
+_043: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      147; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_14.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      147; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_14.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      147; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      147; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_14.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      149; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      149; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _044; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      149,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_15.IN_VALUE_IO);
+_044: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      149; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_15.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      149; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_15.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      149; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      149; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_15.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      151; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      151; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _045; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      151,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_1101_301_16.IN_VALUE_IO);
+_045: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      151; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_16.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      151; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_16.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      151; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      151; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_1101_301_16.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      153; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      153; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _046; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      153,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_101_01.IN_VALUE_IO);
+_046: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      153; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      153; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      153; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      153; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      155; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      155; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _047; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      155,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_101_02.IN_VALUE_IO);
+_047: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      155; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      155; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      155; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      155; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      157; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      157; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _048; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      157,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_101_03.IN_VALUE_IO);
+_048: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      157; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      157; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      157; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      157; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_101_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      159; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      159; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _049; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      159,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_102_01.IN_VALUE_IO);
+_049: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      159; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      159; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      159; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      159; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      161; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      161; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      161,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_102_02.IN_VALUE_IO);
+_04a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      161; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      161; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      161; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      161; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      163; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      163; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      163,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_102_03.IN_VALUE_IO);
+_04b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      163; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      163; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      163; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      163; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_102_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      165; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      165; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      165,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_103_01.IN_VALUE_IO);
+_04c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      165; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      165; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      165; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      165; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      167; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      167; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      167,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_103_02.IN_VALUE_IO);
+_04d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      167; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      167; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      167; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      167; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      169; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      169; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      169,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_103_03.IN_VALUE_IO);
+_04e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      169; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      169; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      169; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      169; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_103_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      171; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      171; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _04f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      171,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_104_01.IN_VALUE_IO);
+_04f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      171; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      171; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      171; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      171; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      173; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      173; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _050; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      173,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_104_02.IN_VALUE_IO);
+_050: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      173; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      173; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      173; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      173; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      175; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      175; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _051; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      175,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_104_03.IN_VALUE_IO);
+_051: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      175; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      175; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      175; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      175; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_104_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      177; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      177; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _052; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      177,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_105_01.IN_VALUE_IO);
+_052: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      177; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      177; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      177; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      177; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      179; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      179; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _053; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      179,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_105_02.IN_VALUE_IO);
+_053: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      179; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      179; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      179; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      179; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      181; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      181; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _054; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      181,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_105_03.IN_VALUE_IO);
+_054: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      181; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      181; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      181; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      181; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_105_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      183; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      183; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _055; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      183,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_106_01.IN_VALUE_IO);
+_055: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      183; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      183; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      183; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      183; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      185; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      185; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _056; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      185,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_106_02.IN_VALUE_IO);
+_056: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      185; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      185; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      185; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      185; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      187; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      187; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _057; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      187,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_106_03.IN_VALUE_IO);
+_057: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      187; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      187; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      187; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      187; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_106_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      189; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      189; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _058; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      189,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_107_01.IN_VALUE_IO);
+_058: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      189; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      189; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      189; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      189; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      191; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      191; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _059; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      191,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_107_02.IN_VALUE_IO);
+_059: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      191; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      191; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      191; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      191; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      193; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      193; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      193,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_107_03.IN_VALUE_IO);
+_05a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      193; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      193; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      193; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      193; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_107_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      195; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      195; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      195,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_108_01.IN_VALUE_IO);
+_05b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      195; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      195; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      195; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      195; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      197; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      197; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05c; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      197,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_108_02.IN_VALUE_IO);
+_05c: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      197; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      197; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      197; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      197; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      199; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      199; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05d; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      199,
+           Scaled                   := "DB_ANALOG_IN".MPS_903_5501_108_03.IN_VALUE_IO);
+_05d: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      199; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_03.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      199; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_03.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      199; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      199; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".MPS_903_5501_108_03.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      201; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      201; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05e; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      201,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_2301_301_01.IN_VALUE_IO);
+_05e: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      201; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      201; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      201; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      201; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      203; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      203; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _05f; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      203,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_2301_301_02.IN_VALUE_IO);
+_05f: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      203; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      203; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      203; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      203; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_2301_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      205; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      205; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _060; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      205,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_2301_301_01.IN_VALUE_IO);
+_060: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      205; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      205; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      205; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      205; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      207; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      207; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _061; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      207,
+           Scaled                   := "DB_ANALOG_IN".TIT_903_2301_301_02.IN_VALUE_IO);
+_061: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      207; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      207; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      207; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      207; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".TIT_903_2301_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      209; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      209; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _062; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      209,
+           Scaled                   := "DB_ANALOG_IN".AIT_903_2301_301_01.IN_VALUE_IO);
+_062: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      209; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      209; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      209; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      209; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      211; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      211; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _063; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      211,
+           Scaled                   := "DB_ANALOG_IN".AIT_903_2301_301_02.IN_VALUE_IO);
+_063: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      211; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      211; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      211; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      211; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".AIT_903_2301_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      213; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      213; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _064; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      213,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_2301_301_01.IN_VALUE_IO);
+_064: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      213; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      213; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      213; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      213; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      215; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      215; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _065; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      215,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_2301_301_02.IN_VALUE_IO);
+_065: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      215; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_02.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      215; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_02.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      215; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      215; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_2301_301_02.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      217; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      217; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _066; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      217,
+           Scaled                   := "DB_ANALOG_IN".FIT_903_2801_201_01.IN_VALUE_IO);
+_066: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      217; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2801_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      217; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".FIT_903_2801_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      217; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      217; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".FIT_903_2801_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      219; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      219; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _067; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      219,
+           Scaled                   := "DB_ANALOG_IN".AIT_903_2801_201_01.IN_VALUE_IO);
+_067: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      219; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2801_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      219; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".AIT_903_2801_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      219; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      219; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".AIT_903_2801_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      221; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      221; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _068; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      221,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_2801_201_01.IN_VALUE_IO);
+_068: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      221; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2801_201_01.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      221; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_2801_201_01.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      221; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      221; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_2801_201_01.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      223; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      223; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _069; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      223,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_5101_201.IN_VALUE_IO);
+_069: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      223; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_5101_201.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      223; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_5101_201.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      223; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      223; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_5101_201.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      225; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      225; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _06a; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      225,
+           Scaled                   := "DB_ANALOG_IN".PIT_903_4701_201.IN_VALUE_IO);
+_06a: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      225; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_4701_201.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      225; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_903_4701_201.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      225; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      225; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_903_4701_201.IO_FAULT;
+
+NETWORK
+TITLE =
+
+      A(    ; 
+      L     IW      227; 
+      L     0; 
+      >=I   ; 
+      )     ; 
+      A(    ; 
+      L     IW      227; 
+
+      L     27648; 
+      <=I   ; 
+      )     ; 
+      JNB   _06b; 
+      CALL "TYP_AI_SCALE" (
+           Low_Limit                := 0.000000e+000,
+           High_Limit               := 1.000000e+002,
+           Max_Raw                  := 2.764800e+004,
+           Raw_In                   := IW      227,
+           Scaled                   := "DB_ANALOG_IN".PIT_902_3401_201.IN_VALUE_IO);
+_06b: NOP   0; 
+NETWORK
+TITLE =
+
+      L     IW      227; 
+      L     0; 
+      <=I   ; 
+      =     "DB_ANALOG_IN".PIT_902_3401_201.IN_VALUE_UNDERRANGE; 
+NETWORK
+TITLE =
+
+      L     IW      227; 
+      L     27648; 
+      >=I   ; 
+      =     "DB_ANALOG_IN".PIT_902_3401_201.IN_VALUE_OVERRANGE; 
+NETWORK
+TITLE =
+
+      O(    ; 
+      L     IW      227; 
+      L     30000; 
+      >I    ; 
+      )     ; 
+      O(    ; 
+      L     IW      227; 
+      L     -30000; 
+      <I    ; 
+      )     ; 
+      =     "DB_ANALOG_IN".PIT_902_3401_201.IO_FAULT;
+END_FUNCTION
