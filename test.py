@@ -81,12 +81,24 @@ def df_filter(df, column, text):
     text_uppercase = text.upper()
     return df[df[column].str.upper().str.contains(text_uppercase)]
 
+def get_all_tags():
+    df_list = []
+    for stype in ['Digital Input', 'Digital Output', 'Analog Input', 'Analog Output']:
+        for index, value in {'L2':2, 'L3':3, 'L9':9}.iteritems():
+            df = getalltags(index + ' ' + stype)
+            df['Level'] = value
+            df_list.append(df)
+    return pd.concat(df_list)            
+
 if __name__ == "__main__":
     # df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4,5,6], skiprows=[0, 1])
     # print df.head()
     # print df.columns
-    df1 = getalltags('L3 Analog Output')
+    #df1 = getalltags('L3 Analog Output')
     '''for index, row in df1.iterrows():
         print splitrange(row['RANGE'])
     print root_dir'''
-    print df_filter(df1, 'DESCRIPTION', 'damper')
+    #print df_filter(df1, 'DESCRIPTION', 'damper')
+    df_all = get_all_tags()
+    print df_all.to_csv(sep='\t', encoding='utf-8')
+
