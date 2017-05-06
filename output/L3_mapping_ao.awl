@@ -86,7 +86,7 @@ TITLE =
       =     L      2.0; 
       BLD   103; 
       CALL "TYP_AO_SCALE" (
-           IN                       := "DB_ANALOG_OUT".TCV_903_1001_101.OUT_VALUE_IO,
+           IN                       := "DB_ANALOG_OUT".TCV_903_1001_102_01.OUT_VALUE_IO,
            HI_LIM                   := 1.000000e+002,
            LO_LIM                   := 0.000000e+000,
            BIPOLAR                  := L      2.0,
@@ -100,7 +100,7 @@ TITLE =
       =     L      2.0; 
       BLD   103; 
       CALL "TYP_AO_SCALE" (
-           IN                       := "DB_ANALOG_OUT".TCV_903_1001_102.OUT_VALUE_IO,
+           IN                       := "DB_ANALOG_OUT".TCV_903_1001_102_02.OUT_VALUE_IO,
            HI_LIM                   := 1.000000e+002,
            LO_LIM                   := 0.000000e+000,
            BIPOLAR                  := L      2.0,

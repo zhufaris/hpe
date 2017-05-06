@@ -8,8 +8,8 @@ DATA_BLOCK "DB_ANALOG_OUT"
 	TCV_903_1001_101_02 : "UDT_CM_OutAnlg"; // MAU 3-1 Chilled Water Control Valve 2
 	MD_903_1001_201_05 : "UDT_CM_OutAnlg"; // L3 Material Transfer Modulating Damper 005
 	SC_903_1001_102 : "UDT_CM_OutAnlg"; // MAU 3-2 VSD Speed Control
-	TCV_903_1001_101 : "UDT_CM_OutAnlg"; // MAU 3-2 Chilled Water Control Valve 1
-	TCV_903_1001_102 : "UDT_CM_OutAnlg"; // MAU 3-2 Chilled Water Control Valve 2
+	TCV_903_1001_102_01 : "UDT_CM_OutAnlg"; // MAU 3-2 Chilled Water Control Valve 1
+	TCV_903_1001_102_02 : "UDT_CM_OutAnlg"; // MAU 3-2 Chilled Water Control Valve 2
 	SC_903_1101_101 : "UDT_CM_OutAnlg"; // DC Pump 3-1VSD Speed Control
 	TCV_903_1101_401_01 : "UDT_CM_OutAnlg"; // DC HEX 3-1 control valve
 	MD_903_1001_201_01 : "UDT_CM_OutAnlg"; // L3 PWAX Wet Area Modulating Damper 001 
