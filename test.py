@@ -69,3 +69,4 @@ if __name__ == "__main__":
     '''for index, row in df1.iterrows():
         print splitrange(row['RANGE'])
     print root_dir'''
+    print df_filter(df1, 'DESCRIPTION', 'damper')
