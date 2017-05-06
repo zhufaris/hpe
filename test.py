@@ -48,11 +48,31 @@ def splitaddress(address):
 def splitrange(rangevalue):
     if not pd.notnull(rangevalue):
         return '', ''
-    match = re.match(r"([0-9]+)\s*[-~]\s*([0-9X]+)", rangevalue, flags=0)
+    match = re.match(r"([0-9]+)\s*[-~]\s*([0-9X]+)", rangevalue, flags = 0)
     if match:
         return match.group(1), match.group(2)
     else:
         raise ValueError('Invalid range format!')
+
+def splitrange1(rangevalue):
+    if not pd.notnull(rangevalue):
+        return '', ''
+    match = re.match(r'(\d+)\s*=\s*(\w+)', rangevalue, flags = 0)
+    if match:
+        return match.group(1), match.group(2)
+    else:
+        raise ValueError('Invalid range value!')
+
+def splitrange2(rangevalue):
+    if not pd.notnull(rangevalue):
+        return '', ''
+    match = re.match(r'()\s*,\s*()', rangevaule, flags = 0)
+    if match:
+        first = match.group(1)
+        second = match.group(2)
+        return splitrange1(first), splitrange1(second)
+    else:
+        raise ValueError('Invalid range value!')
 
 def int_to_hex(number):
     return '{:03x}'.format(number)
