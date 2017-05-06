@@ -8,6 +8,7 @@ root_dir = os.path.dirname(os.path.abspath(__file__))
 tag_dir = os.path.join(root_dir, r"data\HPI BLOCKB_PLC Point to Point Check V4.xls")
 tagslib = pd.ExcelFile(tag_dir)
 
+
 # print tagslib.sheet_names
 
 #df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4, 5, 6], skiprows=[0, 1])
@@ -89,6 +90,8 @@ def get_all_tags():
             df['Level'] = value
             df_list.append(df)
     return pd.concat(df_list)            
+
+df_tags = get_all_tags()
 
 if __name__ == "__main__":
     # df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4,5,6], skiprows=[0, 1])
