@@ -57,11 +57,15 @@ def splitrange(rangevalue):
 def int_to_hex(number):
     return '{:03x}'.format(number)
 
+def df_filter(df, column, text):
+    text_uppercase = text.upper()
+    return df[df[column].str.upper().str.contains(text_uppercase)]
+
 if __name__ == "__main__":
-    df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4,5,6], skiprows=[0, 1])
-    print df.head()
-    print df.columns
-    df1 = getalltags('L3 Analog Input')
-    for index, row in df1.iterrows():
+    # df = tagslib.parse(u'L3 Analog Input', parse_cols=[1,2,3,4,5,6], skiprows=[0, 1])
+    # print df.head()
+    # print df.columns
+    df1 = getalltags('L3 Analog Output')
+    '''for index, row in df1.iterrows():
         print splitrange(row['RANGE'])
-    print root_dir
+    print root_dir'''
